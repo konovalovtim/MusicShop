@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/your_name" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/shopImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/shop" />
+
+        <TextView
+            android:id="@+id/saleText"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/aclonica"
+            android:rotation="-30"
+            android:text="@string/sale_30"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/select_itemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="250dp"
+        android:text="@string/select_item"
+        android:textSize="25sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="200dp" />
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="169dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/guitar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp">
+
+        <TextView
+            android:id="@+id/order_priseText"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/order_prise"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="60dp"
+            android:gravity="center"
+            android:text="@string/quantity"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+
+
+        <TextView
+            android:id="@+id/coast"
+            android:layout_width="93dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="0"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/coastText"
+            android:layout_width="32dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            android:text="$ "
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonminus"
+            android:layout_width="47dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:backgroundTint="#733102"
+            android:onClick="degreaseQuantity"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantityText"
+            android:layout_width="27dp"
+            android:layout_height="60dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/buttonplus"
+            android:layout_width="47dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="#733102"
+            android:onClick="increaseQuantity"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="addToCart"
+        android:backgroundTint="#733102"
+        android:text="@string/add_to_cart" />
+
+</LinearLayout>
+
